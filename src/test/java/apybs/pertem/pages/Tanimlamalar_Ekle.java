@@ -31,6 +31,9 @@ public class Tanimlamalar_Ekle {
     @FindBy(xpath = "//*[text()='Süreç Tipi Tanımlama']")
     public WebElement tablodakiSurecTipiTanimlama;
 
+    @FindBy(xpath = "//*[text()='Komisyon Üye Tipi Tanımlama']")
+    public WebElement tablodakiKomisyonUyeTipiTanimlama;
+
     @FindBy(xpath = "(//*[@id='code'])[3]")
     public WebElement kod;
 

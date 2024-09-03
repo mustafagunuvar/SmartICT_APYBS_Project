@@ -70,17 +70,6 @@ public class stepDefs {
         Assert.assertTrue(tanimlamalarDuzenle.tanimlamalarDuzenleBasligi.isDisplayed());
     }
 
-    @Then("Uzun Metin alanina ‘Uzman Yardimcisi - Duzenlendi’ girilir ve ardindan Kaydet butonuna tiklanir")
-    public void uzunMetinAlaninaUzmanYardimcisiDuzenlendiGirilirVeArdindanKaydetButonunaTiklanir() {
-        ReusableMethods.bekle(2);
-        ReusableMethods.click(tanimlamalarDuzenle.uzunMetin);
-        tanimlamalarDuzenle.uzunMetin.sendKeys(Keys.CONTROL + "A", Keys.BACK_SPACE);
-        ReusableMethods.bekle(2);
-        tanimlamalarDuzenle.uzunMetin.sendKeys("Uzman Yardimcisi - Duzenlendi");
-        ReusableMethods.bekle(2);
-        ReusableMethods.click(tanimlamalarDuzenle.kaydetButonu);
-    }
-
 
     @Then("Tanimlamalar Listesinde aratilan kodun yer aldigi gorulur")
     public void tanimlamalarListesindeAratilanKodunYerAldigiGorulur() {
@@ -154,17 +143,6 @@ public class stepDefs {
         ReusableMethods.click(genelTanimlamalar.duzenleButonu);
     }
 
-    @Then("Kisa Metin alanina ‘C Sinifi Ehliyet’ girilir ve ardindan Kaydet butonuna tiklanir")
-    public void kisaMetinAlaninaCSinifiEhliyetGirilirVeArdindanKaydetButonunaTiklanir() {
-        ReusableMethods.bekle(2);
-        ReusableMethods.click(tanimlamalarDuzenle.kisaMetin);
-        tanimlamalarDuzenle.kisaMetin.sendKeys(Keys.CONTROL + "A", Keys.BACK_SPACE);
-        ReusableMethods.bekle(2);
-        tanimlamalarDuzenle.kisaMetin.sendKeys("C Sinifi Ehliyet");
-        ReusableMethods.bekle(2);
-        ReusableMethods.click(tanimlamalarDuzenle.kaydetButonu);
-    }
-
 
     @Then("Basarili pop-up’ının geldigi ve Tanimlamalar Listesinde duzenlenen kaydin yer aldigi gorulur")
     public void basariliPopUpInınGeldigiVeTanimlamalarListesindeDuzenlenenKaydinYerAldigiGorulur() {
@@ -224,5 +202,39 @@ public class stepDefs {
                 Keys.TAB, ConfigReader.getProperty("surecKisaMetin"), Keys.TAB, ConfigReader.getProperty("surecUzunMetin"));
         ReusableMethods.bekle(1);
         ReusableMethods.click(tanimlamalarEkle.kaydetButonu);
+    }
+
+    @Then("Tanimlamalar Ekle panelinde Tablo alanindan Komisyon Uye Tipi Tanimlama secilir ve Kod,Öncelik Sirasi,Kisa Metin ve Uzun Metin Alanlari doldurulur ardindan Kaydet butonuna tiklanir")
+    public void tanimlamalarEklePanelindeTabloAlanindanKomisyonUyeTipiTanimlamaSecilirVeKodÖncelikSirasiKisaMetinVeUzunMetinAlanlariDoldurulurArdindanKaydetButonunaTiklanir() {
+        ReusableMethods.visibleWait(tanimlamalarEkle.paneldekiTablo, 5);
+        ReusableMethods.click(tanimlamalarEkle.paneldekiTablo);
+        ReusableMethods.visibleWait(tanimlamalarEkle.tablodakiKomisyonUyeTipiTanimlama, 2);
+        ReusableMethods.click(tanimlamalarEkle.tablodakiKomisyonUyeTipiTanimlama);
+        tanimlamalarEkle.kod.sendKeys(ConfigReader.getProperty("komisyonKod"), Keys.TAB, ConfigReader.getProperty("komisyonOncelikSirasi"),
+                Keys.TAB, ConfigReader.getProperty("komisyonKisaMetin"), Keys.TAB, ConfigReader.getProperty("komisyonUzunMetin"));
+        ReusableMethods.bekle(1);
+        ReusableMethods.click(tanimlamalarEkle.kaydetButonu);
+    }
+
+    @Then("Uzun Metin alanina {string} girilir ve ardindan Kaydet butonuna tiklanir")
+    public void uzunMetinAlaninaGirilirVeArdindanKaydetButonunaTiklanir(String str) {
+        ReusableMethods.bekle(2);
+        ReusableMethods.click(tanimlamalarDuzenle.uzunMetin);
+        tanimlamalarDuzenle.uzunMetin.sendKeys(Keys.CONTROL + "A", Keys.BACK_SPACE);
+        ReusableMethods.bekle(2);
+        tanimlamalarDuzenle.uzunMetin.sendKeys(str);
+        ReusableMethods.bekle(2);
+        ReusableMethods.click(tanimlamalarDuzenle.kaydetButonu);
+    }
+
+    @Then("Kisa Metin alanina {string} girilir ve ardindan Kaydet butonuna tiklanir")
+    public void kisaMetinAlaninaGirilirVeArdindanKaydetButonunaTiklanir(String str) {
+        ReusableMethods.bekle(2);
+        ReusableMethods.click(tanimlamalarDuzenle.kisaMetin);
+        tanimlamalarDuzenle.kisaMetin.sendKeys(Keys.CONTROL + "A", Keys.BACK_SPACE);
+        ReusableMethods.bekle(2);
+        tanimlamalarDuzenle.kisaMetin.sendKeys(str);
+        ReusableMethods.bekle(2);
+        ReusableMethods.click(tanimlamalarDuzenle.kaydetButonu);
     }
 }

@@ -14,7 +14,7 @@ Feature: HVL-AZ-PYBS-TMN-YGD-10 Temin Tipi Tanımlamasına olanak sağlayacaktı
     Then Basarili pop-up’ının geldigi ve Tanimlamalar Listesinde eklenen kaydin yer aldigi gorulur
     Then Eklenen kaydin uzerine tiklanir ve duzenle butonuna basilir
     Then Tanimlamalar Duzenle ekraninin acildigi gorulur
-    Then Kisa Metin alanina ‘C Sinifi Ehliyet’ girilir ve ardindan Kaydet butonuna tiklanir
+    Then Kisa Metin alanina "C Sinifi Ehliyet" girilir ve ardindan Kaydet butonuna tiklanir
     Then Basarili pop-up’ının geldigi ve Tanimlamalar Listesinde duzenlenen kaydin yer aldigi gorulur
     Then Arama alanindaki Kod alanina "EHLYT-KOD1" girilir ve Sorgula butonuna tiklanir
     Then Tanimlamalar Listesinde aratilan kodun yer aldigi gorulur
