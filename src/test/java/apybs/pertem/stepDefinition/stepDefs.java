@@ -82,7 +82,6 @@ public class stepDefs {
     }
 
 
-
     @Then("Tanimlamalar Listesinde aratilan kodun yer aldigi gorulur")
     public void tanimlamalarListesindeAratilanKodunYerAldigiGorulur() {
         //.visibleWait(genelTanimlamalar.listeyeEnSonEklenenSatir, 10);
@@ -124,6 +123,18 @@ public class stepDefs {
         ReusableMethods.click(tanimlamalarEkle.tablodakiEhliyetTanimlama);
         tanimlamalarEkle.kod.sendKeys(ConfigReader.getProperty("ehliyetKod"), Keys.TAB, ConfigReader.getProperty("ehliyetOncelikSirasi"),
                 Keys.TAB, ConfigReader.getProperty("ehliyetKisaMetin"), Keys.TAB, ConfigReader.getProperty("ehliyetUzunMetin"));
+        ReusableMethods.bekle(1);
+        ReusableMethods.click(tanimlamalarEkle.kaydetButonu);
+    }
+
+    @Then("Tanimlamalar Ekle panelinde Tablo alanindan Devlet Sinavi Tanimlama secilir ve Kod,Öncelik Sirasi,Kisa Metin ve Uzun Metin Alanlari doldurulur ardindan Kaydet butonuna tiklanir")
+    public void tanimlamalarEklePanelindeTabloAlanindanDevletSinaviTanimlamaSecilirVeKodÖncelikSirasiKisaMetinVeUzunMetinAlanlariDoldurulurArdindanKaydetButonunaTiklanir() {
+        ReusableMethods.visibleWait(tanimlamalarEkle.paneldekiTablo, 5);
+        ReusableMethods.click(tanimlamalarEkle.paneldekiTablo);
+        ReusableMethods.visibleWait(tanimlamalarEkle.tablodakiDevletSinaviTanimlama, 2);
+        ReusableMethods.click(tanimlamalarEkle.tablodakiDevletSinaviTanimlama);
+        tanimlamalarEkle.kod.sendKeys(ConfigReader.getProperty("devletSinaviKod"), Keys.TAB, ConfigReader.getProperty("devletSirasiOncelikSirasi"),
+                Keys.TAB, ConfigReader.getProperty("devletSirasiKisaMetin"), Keys.TAB, ConfigReader.getProperty("devletSirasiUzunMetin"));
         ReusableMethods.bekle(1);
         ReusableMethods.click(tanimlamalarEkle.kaydetButonu);
     }
@@ -177,5 +188,17 @@ public class stepDefs {
         ReusableMethods.click(genelTanimlamalar.listeyeEnSonEklenenSatir);
         ReusableMethods.bekle(2);
         ReusableMethods.click(genelTanimlamalar.silButonu);
+    }
+
+
+    @Then("Öncelik Sirasi alanina {int} girilir ve ardından Kaydet butonuna tiklanir")
+    public void öncelikSirasiAlaninaGirilirVeArdındanKaydetButonunaTiklanir(int sayi) {
+        ReusableMethods.bekle(2);
+        ReusableMethods.click(tanimlamalarDuzenle.oncelikSirasi);
+        tanimlamalarDuzenle.oncelikSirasi.sendKeys(Keys.CONTROL + "A", Keys.BACK_SPACE);
+        ReusableMethods.bekle(2);
+        tanimlamalarDuzenle.oncelikSirasi.sendKeys(Keys.UP, Keys.UP);
+        ReusableMethods.bekle(2);
+        ReusableMethods.click(tanimlamalarDuzenle.kaydetButonu);
     }
 }

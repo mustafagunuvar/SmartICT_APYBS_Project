@@ -22,8 +22,10 @@ public class Tanimlamalar_Ekle {
     @FindBy(xpath = "//*[text()='Ehliyet Tanımlama']")
     public WebElement tablodakiEhliyetTanimlama;
 
+    @FindBy(xpath = "//*[text()='Devlet Sınavı Tanımlama']")
+    public WebElement tablodakiDevletSinaviTanimlama;
 
-    @FindBy(xpath = "(//*[@id='code'])[3]")
+        @FindBy(xpath = "(//*[@id='code'])[3]")
     public WebElement kod;
 
     @FindBy(xpath = "//*[text()='Kaydet']")

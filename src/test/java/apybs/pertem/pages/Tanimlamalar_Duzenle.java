@@ -19,7 +19,10 @@ public class Tanimlamalar_Duzenle {
     @FindBy(xpath = "(//*[@id='shortText'])[3]")
     public WebElement kisaMetin;
 
-    @FindBy(xpath = "//*[text()='Kaydet']")
+    @FindBy(xpath = "(//*[@id='precedence'])[3]")
+    public WebElement oncelikSirasi;
+
+        @FindBy(xpath = "//*[text()='Kaydet']")
     public WebElement kaydetButonu;
 
     @FindBy(xpath = "//*[text()='Başarılı']")
