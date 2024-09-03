@@ -103,7 +103,7 @@ public class ekö_step_defs {
         ReusableMethods.click(genelTanimlamalar.listeyeEnSonEklenenSatir);
         ReusableMethods.visibleWait(genelTanimlamalar.duzenleButonu, 5);
         ReusableMethods.click(genelTanimlamalar.duzenleButonu);
-
+        ReusableMethods.bekle(2);
 
     }
 }
