@@ -9,14 +9,15 @@ public class Tanimlamalar_Ekle {
     public Tanimlamalar_Ekle() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
-    @FindBy(xpath = "//*[@title='Tanımlamalar Ekle']")
-    public WebElement panelBasligi;
 
-    @FindBy(xpath = "(//*[@class='p-dropdown-label p-inputtext p-placeholder ng-star-inserted'])[2]")
+    @FindBy(xpath = "//*[@title='Tanımlamalar Ekle']")
+    public WebElement tanimlamalarEklePanelBasligi;
+
+    @FindBy(xpath = "(//*[text()='Hepsi'])[2]")
     public WebElement paneldekiTablo;
 
-    @FindBy(xpath = "//*[text()='Kaza Türü Grubu']")
-    public WebElement tabloAlanindakiKazaTurGrubu;
+    @FindBy(xpath = "//*[text()='Temin Tipi Tanımlama']")
+    public WebElement tablodakiTeminTipiTanimlama;
 
     @FindBy(xpath = "(//*[@id='code'])[3]")
     public WebElement kod;
@@ -26,8 +27,6 @@ public class Tanimlamalar_Ekle {
 
     @FindBy(xpath = "//*[text()='Başarılı']")
     public WebElement basariliPopUp;
-
-
 
 
 }

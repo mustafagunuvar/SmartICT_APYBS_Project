@@ -1,0 +1,26 @@
+package apybs.pertem.pages;
+
+import apybs.utilities.Driver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class Tanimlamalar_Duzenle {
+    public Tanimlamalar_Duzenle() {
+        PageFactory.initElements(Driver.getDriver(), this);
+    }
+    @FindBy(xpath = "//*[@title='Tanımlamalar Düzenle']")
+    public WebElement tanimlamalarDuzenleBasligi;
+
+    @FindBy(xpath = "(//*[@id='longText'])[3]")
+    public WebElement uzunMetin;
+
+    @FindBy(xpath = "//*[text()='Kaydet']")
+    public WebElement kaydetButonu;
+
+    @FindBy(xpath = "//*[text()='Başarılı']")
+    public WebElement basariliPopUp;
+
+
+
+}

@@ -1,9 +1,9 @@
-package apybs.pertem.stepDefinition;
+package apybs.ekö.stepDefinition;
 
-import apybs.pertem.pages.AnaSayfa;
-import apybs.pertem.pages.Genel_Tanimlamalar;
-import apybs.pertem.pages.Tanimlamalar;
-import apybs.pertem.pages.Tanimlamalar_Ekle;
+import apybs.ekö.pages.AnaSayfa;
+import apybs.ekö.pages.Genel_Tanimlamalar;
+import apybs.ekö.pages.Tanimlamalar;
+import apybs.ekö.pages.Tanimlamalar_Ekle;
 import apybs.utilities.ConfigReader;
 import apybs.utilities.Driver;
 import apybs.utilities.PublicPage;
@@ -14,7 +14,7 @@ import org.junit.Assert;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 
-public class ekö_step_defs {
+public class step_defs {
 
     PublicPage publicPage = new PublicPage();
     AnaSayfa homePage = new AnaSayfa();
@@ -26,7 +26,7 @@ public class ekö_step_defs {
 
     @Given("kullanici {string} sayfasina gider")
     public void kullaniciSayfasinaGider(String str) {
-        Driver.getDriver().get(ConfigReader.getProperty("eköUrl"));
+        Driver.getDriver().get(ConfigReader.getProperty(str));
         ReusableMethods.bekle(2);
     }
 

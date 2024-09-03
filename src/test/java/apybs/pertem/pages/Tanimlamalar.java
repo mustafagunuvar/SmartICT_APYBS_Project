@@ -10,10 +10,7 @@ public class Tanimlamalar {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-
     @FindBy(xpath = "//*[text()='Genel Tanımlamalar']")
     public WebElement genelTanimlamalar;
-
-
 
 }

@@ -13,14 +13,36 @@ public class Genel_Tanimlamalar {
     @FindBy(xpath = "//h1")
     public WebElement genelTanimlamalarBasligi;
 
-    @FindBy(xpath = "//*[@id='HRM_PER_A_EKO_GENELTANIMISLEM_001_add']")
+    @FindBy(xpath = "//*[text()='Ekle']")
     public WebElement ekleButonu;
 
     @FindBy(xpath = "//*[@id='HRM_PER_A_EKO_GENELTANIMISLEM_001_edit']")
     public WebElement duzenleButonu;
 
-    @FindBy(xpath = "(//tr)[2]")
+    @FindBy(xpath = "//*[text()='Sil']")
+    public WebElement silButonu;
+
+    @FindBy(xpath = "(//tr/td)[1]")
     public WebElement listeyeEnSonEklenenSatir;
+
+    @FindBy(xpath = "(//*[@id='code'])[1]")
+    public WebElement aramaAlanindakiKod;
+
+    @FindBy(xpath = "//*[text()='Sorgula']")
+    public WebElement sorgulaButonu;
+
+    @FindBy(xpath = "//*[text()='Temizle']")
+    public WebElement temizleButonu;
+
+    @FindBy(xpath = "//*[@role='alertdialog']")
+    public WebElement alertDialog;
+
+    @FindBy(xpath = "(//*[text()='Sil'])[2]")
+    public WebElement alertDialogIcindekiSil;
+
+
+
+
 
 
 }
