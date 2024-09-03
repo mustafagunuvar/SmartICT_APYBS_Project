@@ -201,4 +201,16 @@ public class stepDefs {
         ReusableMethods.bekle(2);
         ReusableMethods.click(tanimlamalarDuzenle.kaydetButonu);
     }
+
+    @Then("Tanimlamalar Ekle panelinde Tablo alanindan Belge Tipi Tanimlama secilir ve Kod,Öncelik Sirasi,Kisa Metin ve Uzun Metin Alanlari doldurulur ardindan Kaydet butonuna tiklanir")
+    public void tanimlamalarEklePanelindeTabloAlanindanBelgeTipiTanimlamaSecilirVeKodÖncelikSirasiKisaMetinVeUzunMetinAlanlariDoldurulurArdindanKaydetButonunaTiklanir() {
+        ReusableMethods.visibleWait(tanimlamalarEkle.paneldekiTablo, 5);
+        ReusableMethods.click(tanimlamalarEkle.paneldekiTablo);
+        ReusableMethods.visibleWait(tanimlamalarEkle.tablodakiBelgeTipiTanimlama, 2);
+        ReusableMethods.click(tanimlamalarEkle.tablodakiBelgeTipiTanimlama);
+        tanimlamalarEkle.kod.sendKeys(ConfigReader.getProperty("belgeTipiKod"), Keys.TAB, ConfigReader.getProperty("belgeTipiOncelikSirasi"),
+                Keys.TAB, ConfigReader.getProperty("belgeTipiKisaMetin"), Keys.TAB, ConfigReader.getProperty("belgeTipiUzunMetin"));
+        ReusableMethods.bekle(1);
+        ReusableMethods.click(tanimlamalarEkle.kaydetButonu);
+    }
 }
