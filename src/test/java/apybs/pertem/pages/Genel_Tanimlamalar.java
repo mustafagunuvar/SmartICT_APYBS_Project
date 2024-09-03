@@ -28,6 +28,9 @@ public class Genel_Tanimlamalar {
     @FindBy(xpath = "(//*[@id='code'])[1]")
     public WebElement aramaAlanindakiKod;
 
+    @FindBy(xpath = "(//*[@id='shortText'])[1]")
+    public WebElement aramaAlanindakiKisaMetin;
+
     @FindBy(xpath = "//*[text()='Sorgula']")
     public WebElement sorgulaButonu;
 

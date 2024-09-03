@@ -9,18 +9,21 @@ public class Tanimlamalar_Duzenle {
     public Tanimlamalar_Duzenle() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
+
     @FindBy(xpath = "//*[@title='Tanımlamalar Düzenle']")
     public WebElement tanimlamalarDuzenleBasligi;
 
     @FindBy(xpath = "(//*[@id='longText'])[3]")
     public WebElement uzunMetin;
 
+    @FindBy(xpath = "(//*[@id='shortText'])[3]")
+    public WebElement kisaMetin;
+
     @FindBy(xpath = "//*[text()='Kaydet']")
     public WebElement kaydetButonu;
 
     @FindBy(xpath = "//*[text()='Başarılı']")
     public WebElement basariliPopUp;
-
 
 
 }
