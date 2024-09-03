@@ -1,0 +1,33 @@
+package apybs.pertem.pages;
+
+import apybs.utilities.Driver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class Tanimlamalar_Ekle {
+    public Tanimlamalar_Ekle() {
+        PageFactory.initElements(Driver.getDriver(), this);
+    }
+    @FindBy(xpath = "//*[@title='Tanımlamalar Ekle']")
+    public WebElement panelBasligi;
+
+    @FindBy(xpath = "(//*[@class='p-dropdown-label p-inputtext p-placeholder ng-star-inserted'])[2]")
+    public WebElement paneldekiTablo;
+
+    @FindBy(xpath = "//*[text()='Kaza Türü Grubu']")
+    public WebElement tabloAlanindakiKazaTurGrubu;
+
+    @FindBy(xpath = "(//*[@id='code'])[3]")
+    public WebElement kod;
+
+    @FindBy(xpath = "//*[text()='Kaydet']")
+    public WebElement kaydetButonu;
+
+    @FindBy(xpath = "//*[text()='Başarılı']")
+    public WebElement basariliPopUp;
+
+
+
+
+}
