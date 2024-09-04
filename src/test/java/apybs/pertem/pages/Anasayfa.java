@@ -17,4 +17,17 @@ public class Anasayfa {
     public WebElement tanimlamalar;
 
 
+
+    /*
+      PageFactory.initElements(Driver.getDriver(), this),
+      Page Object Model kullanırken sayfa nesnelerinizdeki web öğelerini WebDriver ile başlatmanıza yardımcı olur
+      ve sayfa nesnesinin içindeki öğelerle etkileşimde bulunmayı sağlar. Bu, kodun düzenli ve anlaşılır olmasına katkıda bulunur
+      ve testlerin bakımını kolaylaştırır.
+    */
+
+    /*
+    id,name,className,tagName,linkText,partialLinkText,css,xpath
+     */
+
+
 }

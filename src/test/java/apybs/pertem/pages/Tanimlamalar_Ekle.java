@@ -37,6 +37,9 @@ public class Tanimlamalar_Ekle {
     @FindBy(xpath = "//*[text()='Soru Grubu Tanımlama']")
     public WebElement tablodakiSoruGrubuTanimlama;
 
+    @FindBy(xpath = "//*[text()='Soru Zorluk Derecesi Tanımlama']")
+    public WebElement tablodakiSoruZorlukDerecesiTanimlama;
+
     @FindBy(xpath = "(//*[@id='code'])[3]")
     public WebElement kod;
 
