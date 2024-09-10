@@ -1,6 +1,7 @@
-package apybs.pertem.stepDefinition;
+package apybs.recruitment.stepDefinition;
 
-import apybs.pertem.pages.*;
+import apybs.ekö.pages.ProcessPlaceDefinition;
+import apybs.recruitment.pages.*;
 import apybs.utilities.ConfigReader;
 import apybs.utilities.Driver;
 import apybs.utilities.PublicPage;
@@ -14,11 +15,12 @@ import org.openqa.selenium.interactions.Actions;
 public class stepDefs {
 
     PublicPage publicPage = new PublicPage();
-    Anasayfa anasayfa = new Anasayfa();
-    Tanimlamalar tanimlamalar = new Tanimlamalar();
-    Genel_Tanimlamalar genelTanimlamalar = new Genel_Tanimlamalar();
+    Homepage anasayfa = new Homepage();
+    Definitions tanimlamalar = new Definitions();
+    GeneralDefinitions genelTanimlamalar = new GeneralDefinitions();
     Tanimlamalar_Ekle tanimlamalarEkle = new Tanimlamalar_Ekle();
     Tanimlamalar_Duzenle tanimlamalarDuzenle = new Tanimlamalar_Duzenle();
+    ProcessPlaceDefinition processPlaceDefinition = new ProcessPlaceDefinition();
     Actions actions = new Actions(Driver.getDriver());
 
 
@@ -266,8 +268,13 @@ public class stepDefs {
     public void personelTeminIslemleriPanelindekiTanimlamalarMenüsüIcerisindeBulunanSurecYeriTanimlamaButonuUzerineTiklanir() {
         ReusableMethods.bekle(1);
         ReusableMethods.click(anasayfa.tanimlamalar);
-        ReusableMethods.visibleWait(tanimlamalar.
-        ReusableMethods.click(tanimlamalar.genelTanimlamalar);
+        ReusableMethods.visibleWait(tanimlamalar.surecYerTanimlama, 5);
+        ReusableMethods.click(tanimlamalar.surecYerTanimlama);
+    }
 
+    @Then("Surec Yeri Tanimlama ekraninin acildıgi gorulur")
+    public void surecYeriTanimlamaEkranininAcildıgiGorulur() {
+        ReusableMethods.visibleWait(processPlaceDefinition.processPlaceTitle, 5);
+        Assert.assertTrue(processPlaceDefinition.processPlaceTitle.isDisplayed());
     }
 }

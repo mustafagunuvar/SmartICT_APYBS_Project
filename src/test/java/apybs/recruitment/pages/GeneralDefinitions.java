@@ -1,12 +1,12 @@
-package apybs.pertem.pages;
+package apybs.recruitment.pages;
 
 import apybs.utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class Genel_Tanimlamalar {
-    public Genel_Tanimlamalar() {
+public class GeneralDefinitions {
+    public GeneralDefinitions() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 

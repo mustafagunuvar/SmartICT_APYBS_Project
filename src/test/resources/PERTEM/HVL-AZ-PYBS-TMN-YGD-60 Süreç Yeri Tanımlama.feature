@@ -6,7 +6,7 @@ Feature: HVL-AZ-PYBS-TMN-YGD-10 Temin Tipi Tanımlamasına olanak sağlayacaktı
     Then personel temin profili secilir
     Then ana paneldeki personel temin butonuna tiklanir
     Then Personel Temin islemleri panelindeki Tanimlamalar Menüsü icerisinde bulunan Surec Yeri Tanimlama butonu uzerine tiklanir
-    Then Genel Tanımlamalar ekraninin acildıgi gorulur
+    Then Surec Yeri Tanimlama ekraninin acildıgi gorulur
     Then Tanimlamalar Listesi alaninda bulunan Ekle butonu uzerine tiklanir
     Then Tanimlamalar Ekle panelinin acildigi gorulur
     Then Tanimlamalar Ekle panelinde Tablo alanindan Soru Zorluk Derecesi Tanimlama secilir ve Kod,Öncelik Sirasi,Kisa Metin ve Uzun Metin Alanlari doldurulur ardindan Kaydet butonuna tiklanir

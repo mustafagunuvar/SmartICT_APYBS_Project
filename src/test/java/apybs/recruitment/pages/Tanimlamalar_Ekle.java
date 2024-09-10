@@ -1,4 +1,4 @@
-package apybs.pertem.pages;
+package apybs.recruitment.pages;
 
 import apybs.utilities.Driver;
 import org.openqa.selenium.WebElement;

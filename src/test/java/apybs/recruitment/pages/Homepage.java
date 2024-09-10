@@ -1,12 +1,12 @@
-package apybs.pertem.pages;
+package apybs.recruitment.pages;
 
 import apybs.utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class Anasayfa {
-    public Anasayfa() {
+public class Homepage {
+    public Homepage() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 

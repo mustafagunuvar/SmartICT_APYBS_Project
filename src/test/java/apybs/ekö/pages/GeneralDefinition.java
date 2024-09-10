@@ -5,8 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class Genel_Tanimlamalar {
-    public Genel_Tanimlamalar() {
+public class GeneralDefinition {
+    public GeneralDefinition() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 

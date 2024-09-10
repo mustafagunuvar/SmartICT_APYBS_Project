@@ -1,8 +1,8 @@
 package apybs.ekö.stepDefinition;
 
 import apybs.ekö.pages.AnaSayfa;
-import apybs.ekö.pages.Genel_Tanimlamalar;
-import apybs.ekö.pages.Tanimlamalar;
+import apybs.ekö.pages.GeneralDefinition;
+import apybs.ekö.pages.Definitions;
 import apybs.ekö.pages.Tanimlamalar_Ekle;
 import apybs.utilities.ConfigReader;
 import apybs.utilities.Driver;
@@ -18,8 +18,8 @@ public class step_defs {
 
     PublicPage publicPage = new PublicPage();
     AnaSayfa homePage = new AnaSayfa();
-    Tanimlamalar tanimlamalar = new Tanimlamalar();         //EKÖ Panelindeki 4 ana ekrandan bir tanesi
-    Genel_Tanimlamalar genelTanimlamalar = new Genel_Tanimlamalar();
+    Definitions tanimlamalar = new Definitions();         //EKÖ Panelindeki 4 ana ekrandan bir tanesi
+    GeneralDefinition generalDefinition = new GeneralDefinition();
     Tanimlamalar_Ekle tanimlamalarEkle = new Tanimlamalar_Ekle();
     Actions actions = new Actions(Driver.getDriver());
 
@@ -65,13 +65,13 @@ public class step_defs {
 
     @Then("Genel Tanimlamalar ekraninin acildigi görülür")
     public void genelTanimlamalarEkranininAcildigiGörülür() {
-        ReusableMethods.visibleWait(genelTanimlamalar.genelTanimlamalarBasligi, 5);
-        Assert.assertTrue(genelTanimlamalar.genelTanimlamalarBasligi.isDisplayed());
+        ReusableMethods.visibleWait(generalDefinition.genelTanimlamalarBasligi, 5);
+        Assert.assertTrue(generalDefinition.genelTanimlamalarBasligi.isDisplayed());
     }
 
     @Then("Tanımlamalar Listesi alanında bulunan Ekle butonu üzerine tıklanır")
     public void tanımlamalarListesiAlanındaBulunanEkleButonuÜzerineTıklanır() {
-        ReusableMethods.click(genelTanimlamalar.ekleButonu);
+        ReusableMethods.click(generalDefinition.ekleButonu);
     }
 
     @Then("Tanımlamalar Ekle panelinin açıldığı görülür")
@@ -95,14 +95,14 @@ public class step_defs {
     public void başarılıPopUpInınGeldiğiVeTanımlamalarListesindeEklenenKazaTürüGrubununYerAldığıGörülür() {
         ReusableMethods.visibleWait(tanimlamalarEkle.basariliPopUp, 5);
         Assert.assertTrue(tanimlamalarEkle.basariliPopUp.isDisplayed());
-        Assert.assertTrue(genelTanimlamalar.listeyeEnSonEklenenSatir.isDisplayed());
+        Assert.assertTrue(generalDefinition.listeyeEnSonEklenenSatir.isDisplayed());
     }
 
     @Then("Eklenen Kaza Türü Grubu üzerine tıklanır ve düzenle butonuna basılır")
     public void eklenenKazaTürüGrubuÜzerineTıklanırVeDüzenleButonunaBasılır() {
-        ReusableMethods.click(genelTanimlamalar.listeyeEnSonEklenenSatir);
-        ReusableMethods.visibleWait(genelTanimlamalar.duzenleButonu, 5);
-        ReusableMethods.click(genelTanimlamalar.duzenleButonu);
+        ReusableMethods.click(generalDefinition.listeyeEnSonEklenenSatir);
+        ReusableMethods.visibleWait(generalDefinition.duzenleButonu, 5);
+        ReusableMethods.click(generalDefinition.duzenleButonu);
 
     }
 }
