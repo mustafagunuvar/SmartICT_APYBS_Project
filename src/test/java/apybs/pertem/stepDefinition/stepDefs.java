@@ -261,4 +261,13 @@ public class stepDefs {
         ReusableMethods.bekle(1);
         ReusableMethods.click(tanimlamalarEkle.kaydetButonu);
     }
+
+    @Then("Personel Temin islemleri panelindeki Tanimlamalar Menüsü icerisinde bulunan Surec Yeri Tanimlama butonu uzerine tiklanir")
+    public void personelTeminIslemleriPanelindekiTanimlamalarMenüsüIcerisindeBulunanSurecYeriTanimlamaButonuUzerineTiklanir() {
+        ReusableMethods.bekle(1);
+        ReusableMethods.click(anasayfa.tanimlamalar);
+        ReusableMethods.visibleWait(tanimlamalar.
+        ReusableMethods.click(tanimlamalar.genelTanimlamalar);
+
+    }
 }

@@ -14,6 +14,7 @@ public class Tanimlamalar {
     @FindBy(xpath = "//*[text()='Genel Tanımlamalar']")
     public WebElement genelTanimlamalar;
 
-
+    @FindBy(xpath = "//*[text()='Süreç Yeri Tanımlama']")
+    public WebElement abc;
 
 }
