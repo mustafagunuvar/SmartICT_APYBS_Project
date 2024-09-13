@@ -5,19 +5,19 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class Tanimlamalar_Ekle {
-    public Tanimlamalar_Ekle() {
+public class DefinitionsSave {
+    public DefinitionsSave() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
     @FindBy(xpath = "//*[@title='Tanımlamalar Ekle']")
-    public WebElement tanimlamalarEklePanelBasligi;
+    public WebElement definitionsAddPanelTitle;
 
     @FindBy(xpath = "(//*[text()='Hepsi'])[2]")
-    public WebElement paneldekiTablo;
+    public WebElement tableInPanel;
 
     @FindBy(xpath = "//*[text()='Temin Tipi Tanımlama']")
-    public WebElement tablodakiTeminTipiTanimlama;
+    public WebElement tableSupplyTypeDefinition;
 
     @FindBy(xpath = "//*[text()='Ehliyet Tanımlama']")
     public WebElement tablodakiEhliyetTanimlama;

@@ -11,9 +11,9 @@ public class Definitions {
     }
 
     @FindBy(xpath = "//*[text()='Genel Tanımlamalar']")
-    public WebElement genelTanimlamalar;
+    public WebElement generalDefinitionsButton;
 
     @FindBy(xpath = "//*[text()='Süreç Yeri Tanımlama']")
-    public WebElement surecYerTanimlama;
+    public WebElement processPlaceDefinitionsButton;
 
 }

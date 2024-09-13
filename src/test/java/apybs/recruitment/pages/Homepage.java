@@ -11,10 +11,10 @@ public class Homepage {
     }
 
     @FindBy(xpath = "(//*[@class='p-element layout-mainmenu-link ng-tns-c4277490939-6'])[2]")
-    public WebElement paneldekiPertem;
+    public WebElement leftPanelPertemButton;
 
     @FindBy(xpath = "//*[text()='Tanımlamalar']")
-    public WebElement tanimlamalar;
+    public WebElement definitionsExpandMenu;
 
 
 

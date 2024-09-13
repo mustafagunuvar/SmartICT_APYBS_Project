@@ -27,9 +27,6 @@ public class PublicPage {
     @FindBy(xpath = "//*[@aria-label='Personel Temin Profil']")
     public WebElement pertemProfili;
 
-
-
-
     @FindBy(xpath = "//*[text()='Devam Et']")
     public WebElement devamEt;
 

@@ -5,8 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class Tanimlamalar_Duzenle {
-    public Tanimlamalar_Duzenle() {
+public class DefinitionsUpdate {
+    public DefinitionsUpdate() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
