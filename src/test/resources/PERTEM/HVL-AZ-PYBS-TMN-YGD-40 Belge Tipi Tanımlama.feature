@@ -1,4 +1,5 @@
 Feature: HVL-AZ-PYBS-TMN-YGD-40 Belge Tipi Tanımlamasına olanak sağlayacaktır
+  @scenarious
   Scenario: PERTEM Belge Tipi Tanimlama, Düzenleme, Listeleme ve silme testi
     Given kullanici "pertemUrl" sayfasina gider
     Then "hvltest1" ve "123" girilir

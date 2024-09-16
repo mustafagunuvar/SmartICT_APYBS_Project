@@ -1,4 +1,5 @@
 Feature: HVL-AZ-PYBS-TMN-YGD-100 Soru Zorluk Derecesi Tanımlamasına olanak sağlayacaktır
+  @scenarious
   Scenario: PERTEM Soru Zorluk Derecesi Tanimlama, Düzenleme, Listeleme ve silme testi
     Given kullanici "pertemUrl" sayfasina gider
     Then "hvltest1" ve "123" girilir

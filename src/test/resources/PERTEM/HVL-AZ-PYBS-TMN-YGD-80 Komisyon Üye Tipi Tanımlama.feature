@@ -1,4 +1,5 @@
 Feature: HVL-AZ-PYBS-TMN-YGD-80 Komisyon Üye Tipi Tanımlamasına olanak sağlayacaktır
+  @scenarious
   Scenario: PERTEM Komisyon Üye Tipi Tanimlama, Düzenleme, Listeleme ve silme testi
     Given kullanici "pertemUrl" sayfasina gider
     Then "hvltest1" ve "123" girilir

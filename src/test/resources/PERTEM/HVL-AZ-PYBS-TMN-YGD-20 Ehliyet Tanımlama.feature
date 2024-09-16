@@ -1,5 +1,5 @@
 Feature: HVL-AZ-PYBS-TMN-YGD-20 Ehliyet Tanımlamasına olanak sağlayacaktır
-  @secondly
+  @scenarious
   Scenario: PERTEM Ehliyet Tanimlama, Düzenleme, Listeleme ve silme testi
     Given kullanici "pertemUrl" sayfasina gider
     Then "hvltest1" ve "123" girilir

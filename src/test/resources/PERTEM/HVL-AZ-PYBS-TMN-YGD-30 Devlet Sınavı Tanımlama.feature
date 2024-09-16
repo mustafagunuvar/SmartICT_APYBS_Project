@@ -1,4 +1,5 @@
 Feature: HVL-AZ-PYBS-TMN-YGD-30 Devlet Sınavı Tanımlamasına olanak sağlayacaktır
+  @scenarious
   Scenario: PERTEM Devlet Sınavı Tanimlama, Düzenleme, Listeleme ve silme testi
     Given kullanici "pertemUrl" sayfasina gider
     Then "hvltest1" ve "123" girilir

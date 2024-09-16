@@ -1,1 +1,0 @@
-file:src/test/resources/PERTEM/features/HVL-AZ-PYBS-TMN-YGD-20%20Ehliyet%20Tanımlama.feature:3

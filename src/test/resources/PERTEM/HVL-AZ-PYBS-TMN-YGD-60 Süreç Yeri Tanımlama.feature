@@ -1,4 +1,5 @@
 Feature: HVL-AZ-PYBS-TMN-YGD-60 Süreç Yeri Tanımlamasına olanak sağlayacaktır
+  @scenarious
   Scenario: PERTEM Süreç Yeri Tanimlama, Düzenleme, Listeleme ve silme testi
     Given kullanici "pertemUrl" sayfasina gider
     Then "hvltest1" ve "123" girilir

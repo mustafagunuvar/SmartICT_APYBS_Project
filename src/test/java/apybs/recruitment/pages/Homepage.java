@@ -10,7 +10,7 @@ public class Homepage {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    @FindBy(xpath = "(//*[@class='p-element layout-mainmenu-link ng-tns-c4277490939-6'])[2]")
+    @FindBy(xpath = "//*[text()='supervisor_account']")
     public WebElement leftPanelPertemButton;
 
     @FindBy(xpath = "//*[text()='Tanımlamalar']")
