@@ -25,6 +25,11 @@ public class ProcessPlaceSave {
     @FindBy(xpath = "//*[@type='submit']")
     public WebElement submitButtonInPanel ;
 
+    @FindBy(xpath = "(//*[@class='p-dropdown-label p-inputtext p-placeholder ng-star-inserted'])[2]")
+    public WebElement cityInPanel ;
+
+
+
 
 
 

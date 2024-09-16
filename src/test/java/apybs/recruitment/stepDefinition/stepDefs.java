@@ -27,8 +27,9 @@ public class stepDefs {
 
     @Then("personel temin profili secilir")
     public void personelTeminProfiliSecilir() {
+        ReusableMethods.visibleWait(publicPage.profilSecme, 4);
         ReusableMethods.click(publicPage.profilSecme);
-        ReusableMethods.visibleWait(publicPage.pertemProfili, 10);
+        ReusableMethods.visibleWait(publicPage.pertemProfili, 9);
         ReusableMethods.click(publicPage.pertemProfili);
         ReusableMethods.bekle(2);
         ReusableMethods.click(publicPage.devamEt);
@@ -287,9 +288,9 @@ public class stepDefs {
 
     @Then("Surec Yeri Ekle panelindeki alanlar doldurulur ardindan Kaydet butonuna tiklanir")
     public void surecYeriEklePanelindekiAlanlarDoldurulurArdindanKaydetButonunaTiklanir() {
-        processPlaceSave.processPlaceNameInPanel.sendKeys(ConfigReader.getProperty("surecYeriAdi"),
-                Keys.TAB);
-        actions.sendKeys(Keys.DOWN).perform();
+        processPlaceSave.processPlaceNameInPanel.sendKeys(ConfigReader.getProperty("surecYeriAdi"));
+        ReusableMethods.click(processPlaceSave.cityInPanel);
+        actions.sendKeys(Keys.DOWN).sendKeys(Keys.DOWN).perform();
         processPlaceSave.capacityInPanel.sendKeys(ConfigReader.getProperty("kapasite"),
                 Keys.TAB, ConfigReader.getProperty("aciklama"));
         ReusableMethods.click(processPlaceSave.activeCheckboxInPanel);

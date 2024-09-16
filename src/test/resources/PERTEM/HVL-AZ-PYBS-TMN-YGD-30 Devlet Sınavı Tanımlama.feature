@@ -1,5 +1,5 @@
-Feature: HVL-AZ-PYBS-TMN-YGD-10 Temin Tipi Tanımlamasına olanak sağlayacaktır
-  Scenario: PERTEM Temin Tipi Tanimlama, Düzenleme, Listeleme ve silme testi
+Feature: HVL-AZ-PYBS-TMN-YGD-30 Devlet Sınavı Tanımlamasına olanak sağlayacaktır
+  Scenario: PERTEM Devlet Sınavı Tanimlama, Düzenleme, Listeleme ve silme testi
     Given kullanici "pertemUrl" sayfasina gider
     Then "hvltest1" ve "123" girilir
     Then portala giris yapilir

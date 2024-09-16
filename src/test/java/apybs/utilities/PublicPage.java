@@ -18,7 +18,7 @@ public class PublicPage {
     @FindBy(xpath = "//*[text()='Giriş Yap']")
     public WebElement girisYap;
 
-    @FindBy(xpath = "//p-dropdown[@id='profileInput']")
+    @FindBy(xpath = "//*[text()='Profil Seçiniz']")
     public WebElement profilSecme;
 
     @FindBy(xpath = "//*[@aria-label='EKÖ Admin Profil']")
