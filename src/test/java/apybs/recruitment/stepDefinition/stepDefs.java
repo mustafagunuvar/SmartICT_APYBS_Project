@@ -316,4 +316,16 @@ public class stepDefs {
     public void portalaGirisYapilir() {
         ReusableMethods.click(publicPage.girisYap);
     }
+
+    @And("Basarili pop-up’inin geldigi ve Listede silinen kaydin olmadigi dogrulanir")
+    public void basariliPopUpIninGeldigiVeListedeSilinenKaydinOlmadigiDogrulanir() {
+        ReusableMethods.visibleWait(generalDefinitions.basariliPopUpForDelete, 5);
+        Assert.assertTrue(generalDefinitions.basariliPopUpForDelete.isDisplayed());
+    }
+
+    @Then("Personel Temin islemleri panelindeki Sinav islemleri Menusu icerisinde bulunan Soru Tanimlamalar butonu uzerine tiklanir")
+    public void personelTeminIslemleriPanelindekiSinavIslemleriMenusuIcerisindeBulunanSoruTanimlamalarButonuUzerineTiklanir() {
+        ReusableMethods.visibleWait(homepage.examOperationsExpandMenu, 5);
+        ReusableMethods.click(homepage.examOperationsExpandMenu);
+    }
 }

@@ -11,6 +11,7 @@ Feature: HVL-AZ-PYBS-TMN-YGD-60 Süreç Yeri Tanımlamasına olanak sağlayacakt
     Then Tanimlamalar Listesi alaninda bulunan Ekle butonu uzerine tiklanir
     Then Surec Yeri Ekle panelinin acildigi gorulur
     Then Surec Yeri Ekle panelindeki alanlar doldurulur ardindan Kaydet butonuna tiklanir
+    #And Basarili pop-up’inin geldigi ve Listede silinen kaydin olmadigi dogrulanir
    #Then Basarili pop-up’ının geldigi ve Tanimlamalar Listesinde eklenen kaydin yer aldigi gorulur
    #hen Eklenen kaydin uzerine tiklanir ve duzenle butonuna basilir
    #hen Tanimlamalar Duzenle ekraninin acildigi gorulur

@@ -16,6 +16,9 @@ public class Homepage {
     @FindBy(xpath = "//*[text()='Tanımlamalar']")
     public WebElement definitionsExpandMenu;
 
+    @FindBy(xpath = "//*[text()='Sınav İşlemleri']")
+    public WebElement examOperationsExpandMenu;
+
 
 
     /*

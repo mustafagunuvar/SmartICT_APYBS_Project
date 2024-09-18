@@ -43,6 +43,11 @@ public class GeneralDefinitions {
     @FindBy(xpath = "(//*[text()='Sil'])[2]")
     public WebElement deleteInAlertDialog;
 
+    @FindBy(xpath = "//*[text()='Başarılı']")
+    public WebElement basariliPopUpForDelete;
+
+
+
 
 
 

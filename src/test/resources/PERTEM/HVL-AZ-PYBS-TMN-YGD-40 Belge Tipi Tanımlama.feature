@@ -20,6 +20,7 @@ Feature: HVL-AZ-PYBS-TMN-YGD-40 Belge Tipi Tanımlamasına olanak sağlayacaktı
     Then Tanimlamalar Listesinde aratilan kodun yer aldigi gorulur
     Then Aratilan kaydin uzerine tiklanir ve sil butonuna basilir
     Then Silme Onay pop-up inin acildigi ve onay uyari metninin yer aldigi gorulur
-    And Silme Onay pop-undaki Sil butonuna tiklanir
+    Then Silme Onay pop-undaki Sil butonuna tiklanir
+    And Basarili pop-up’inin geldigi ve Listede silinen kaydin olmadigi dogrulanir
 
 
