@@ -1,0 +1,2 @@
+file:src/test/resources/PERTEM/HVL-AZ-PYBS-TMN-YGD-80%20Komisyon%20Üye%20Tipi%20Tanımlama.feature:3
+file:src/test/resources/PERTEM/HVL-AZ-PYBS-TMN-YGD-70%20Süreç%20Tipi%20Tanımlama.feature:3

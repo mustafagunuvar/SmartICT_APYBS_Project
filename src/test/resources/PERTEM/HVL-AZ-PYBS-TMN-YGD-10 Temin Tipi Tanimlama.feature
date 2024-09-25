@@ -23,6 +23,25 @@ Feature: HVL-AZ-PYBS-TMN-YGD-10 Temin Tipi Tanımlamasına olanak sağlayacaktı
     Then Silme Onay pop-undaki Sil butonuna tiklanir
     And Basarili pop-up’inin geldigi ve Listede silinen kaydin olmadigi dogrulanir
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     #.feature uzantılı dosyalar, Behavior Driven Development (BDD) (Davranışa Dayalı Geliştirme) yönteminde kullanılan özellik dosyalarıdır.
     # Genellikle Cucumber veya benzeri BDD araçlarıyla ilişkilidirler.
     # Bu dosyalar, yazılımın işlevselliğini tanımlayan senaryoları açık ve anlaşılır bir şekilde ifade eder.
