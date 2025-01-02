@@ -22,6 +22,7 @@ Feature: HVL-AZ-PYBS-TMN-YGD-10 Temin Tipi Tanımlamasına olanak sağlayacaktı
     Then Silme Onay pop-up inin acildigi ve onay uyari metninin yer aldigi gorulur
     Then Silme Onay pop-undaki Sil butonuna tiklanir
     And Basarili pop-up’inin geldigi ve Listede silinen kaydin olmadigi dogrulanir
+  Then emre abi
 
 
 

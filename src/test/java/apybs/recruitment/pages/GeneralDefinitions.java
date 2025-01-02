@@ -22,7 +22,7 @@ public class GeneralDefinitions {
     @FindBy(xpath = "//*[text()='Sil']")
     public WebElement deleteButton;
 
-    @FindBy(xpath = "(//tr/td)[1]")
+    @FindBy(xpath = "(//tr)[2]")
     public WebElement lastAddedRowToList;
 
     @FindBy(xpath = "(//*[@id='code'])[1]")

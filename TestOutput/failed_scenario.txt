@@ -1,2 +1,8 @@
+file:src/test/resources/PERTEM/HVL-AZ-PYBS-TMN-YGD-60%20Süreç%20Yeri%20Tanımlama.feature:3
+file:src/test/resources/PERTEM/HVL-AZ-PYBS-TMN-YGD-20%20Ehliyet%20Tanımlama.feature:3
+file:src/test/resources/PERTEM/HVL-AZ-PYBS-TMN-YGD-40%20Belge%20Tipi%20Tanımlama.feature:3
+file:src/test/resources/PERTEM/HVL-AZ-PYBS-TMN-YGD-10%20Temin%20Tipi%20Tanimlama.feature:3
 file:src/test/resources/PERTEM/HVL-AZ-PYBS-TMN-YGD-80%20Komisyon%20Üye%20Tipi%20Tanımlama.feature:3
 file:src/test/resources/PERTEM/HVL-AZ-PYBS-TMN-YGD-70%20Süreç%20Tipi%20Tanımlama.feature:3
+file:src/test/resources/PERTEM/HVL-AZ-PYBS-TMN-YGD-100%20Soru%20Zorluk%20Derecesi%20Tanımlama.feature:3
+file:src/test/resources/PERTEM/HVL-AZ-PYBS-TMN-YGD-30%20Devlet%20Sınavı%20Tanımlama.feature:3

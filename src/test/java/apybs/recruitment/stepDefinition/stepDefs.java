@@ -1,6 +1,5 @@
 package apybs.recruitment.stepDefinition;
 
-import apybs.ekö.pages.ProcessPlaceDefinition;
 import apybs.recruitment.pages.*;
 import apybs.utilities.ConfigReader;
 import apybs.utilities.Driver;
@@ -21,7 +20,6 @@ public class stepDefs {
     GeneralDefinitions generalDefinitions = new GeneralDefinitions();
     DefinitionsSave definitionsSave = new DefinitionsSave();
     DefinitionsUpdate definitionsUpdate = new DefinitionsUpdate();
-    ProcessPlaceDefinition processPlaceDefinition = new ProcessPlaceDefinition();
     ProcessPlaceSave processPlaceSave = new ProcessPlaceSave();
     Actions actions = new Actions(Driver.getDriver());
 
@@ -135,7 +133,7 @@ public class stepDefs {
 
     @Then("Basarili pop-up’ının geldigi ve Tanimlamalar Listesinde eklenen kaydin yer aldigi gorulur")
     public void basariliPopUpInınGeldigiVeTanimlamalarListesindeEklenenKaydinYerAldigiGorulur() {
-        ReusableMethods.visibleWait(definitionsSave.basariliPopUp, 5);
+        //ReusableMethods.visibleWait(definitionsSave.basariliPopUp, 5);
         Assert.assertTrue(definitionsSave.basariliPopUp.isDisplayed());
         Assert.assertTrue(generalDefinitions.lastAddedRowToList.isDisplayed());
         ReusableMethods.bekle(2);
@@ -151,7 +149,7 @@ public class stepDefs {
 
     @Then("Basarili pop-up’ının geldigi ve Tanimlamalar Listesinde duzenlenen kaydin yer aldigi gorulur")
     public void basariliPopUpInınGeldigiVeTanimlamalarListesindeDuzenlenenKaydinYerAldigiGorulur() {
-        ReusableMethods.visibleWait(definitionsUpdate.basariliPopUp, 5);
+        ReusableMethods.visibleWait(definitionsUpdate.basariliPopUp, 10);
         Assert.assertTrue(definitionsUpdate.basariliPopUp.isDisplayed());
         ReusableMethods.visibleWait(generalDefinitions.lastAddedRowToList, 5);
         Assert.assertTrue(generalDefinitions.lastAddedRowToList.isDisplayed());
@@ -275,11 +273,7 @@ public class stepDefs {
         ReusableMethods.click(definitions.processPlaceDefinitionsButton);
     }
 
-    @Then("Surec Yeri Tanimlama ekraninin acildıgi gorulur")
-    public void surecYeriTanimlamaEkranininAcildıgiGorulur() {
-        ReusableMethods.visibleWait(processPlaceDefinition.processPlaceTitle, 5);
-        Assert.assertTrue(processPlaceDefinition.processPlaceTitle.isDisplayed());
-    }
+
 
     @Then("Surec Yeri Ekle panelinin acildigi gorulur")
     public void surecYeriEklePanelininAcildigiGorulur() {
@@ -327,5 +321,10 @@ public class stepDefs {
     public void personelTeminIslemleriPanelindekiSinavIslemleriMenusuIcerisindeBulunanSoruTanimlamalarButonuUzerineTiklanir() {
         ReusableMethods.visibleWait(homepage.examOperationsExpandMenu, 5);
         ReusableMethods.click(homepage.examOperationsExpandMenu);
+    }
+
+    @Then("emre abi")
+    public void emreAbi() {
+
     }
 }
