@@ -1,11 +1,13 @@
 Feature: HVL-AZ-PYBS-TMN-YGD-70 Süreç Tipi Tanımlamasına olanak sağlayacaktır
-  @scenarious
+  @hooks
   Scenario: PERTEM Süreç Tipi Tanimlama, Düzenleme, Listeleme ve silme testi
     Given kullanici "pertemUrl" sayfasina gider
     Then "hvltest1" ve "123" girilir
     Then portala giris yapilir
     Then personel temin profili secilir
     Then ana paneldeki personel temin butonuna tiklanir
+  @scenarious
+  Scenario: PERTEM Süreç Tipi Tanimlama, Düzenleme, Listeleme ve silme testi
     Then Personel Temin islemleri panelindeki Tanimlamalar Menüsü icerisinde bulunan Genel Tanimlamalar butonu uzerine tiklanir
     Then Genel Tanımlamalar ekraninin acildıgi gorulur
     Then Tanimlamalar Listesi alaninda bulunan Ekle butonu uzerine tiklanir
