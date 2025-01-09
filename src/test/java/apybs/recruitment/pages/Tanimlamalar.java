@@ -5,15 +5,15 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class Definitions {
-    public Definitions() {
+public class Tanimlamalar {
+    public Tanimlamalar() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
     @FindBy(xpath = "//*[text()='Genel Tanımlamalar']")
-    public WebElement generalDefinitionsButton;
+    public WebElement genelTanimlamalarButonu;
 
     @FindBy(xpath = "//*[text()='Süreç Yeri Tanımlama']")
-    public WebElement processPlaceDefinitionsButton;
+    public WebElement surecYeriTanimlamaButonu;
 
 }

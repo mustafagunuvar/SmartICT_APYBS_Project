@@ -1,6 +1,6 @@
 package apybs.recruitment.stepDefinition;
 
-import apybs.recruitment.pages.Homepage;
+import apybs.recruitment.pages.Anasayfa;
 import apybs.utilities.ConfigReader;
 import apybs.utilities.Driver;
 import apybs.utilities.PublicPage;
@@ -11,7 +11,7 @@ import org.openqa.selenium.Keys;
 
 public class CommonSteps {
     PublicPage publicPage = new PublicPage();
-    Homepage homepage = new Homepage();
+    Anasayfa homepage = new Anasayfa();
 
 
     @Given("kullanici {string} sayfasina gider")
