@@ -13,42 +13,39 @@ import org.openqa.selenium.interactions.Actions;
 public class StepDefs {
 
 
-    Anasayfa homepage = new Anasayfa();
-    Tanimlamalar definitions = new Tanimlamalar();
-    GenelTanimlamalar generalDefinitions = new GenelTanimlamalar();
-    TanimlamalarEkle definitionsSave = new TanimlamalarEkle();
+    Anasayfa anasayfa = new Anasayfa();
+    Tanimlamalar tanimlamalar = new Tanimlamalar();
+    GenelTanimlamalar genelTanimlamalar = new GenelTanimlamalar();
+    TanimlamalarEkle tanimlamalarEkle = new TanimlamalarEkle();
     TanimlamalarDuzenle definitionsUpdate = new TanimlamalarDuzenle();
     SurecYeriEkle processPlaceSave = new SurecYeriEkle();
     Actions actions = new Actions(Driver.getDriver());
 
 
-
-
-
     @Then("Personel Temin islemleri panelindeki Tanimlamalar Menüsü icerisinde bulunan Genel Tanimlamalar butonu uzerine tiklanir")
     public void personelTeminIslemleriPanelindekiTanimlamalarMenüsüIcerisindeBulunanGenelTanimlamalarButonuUzerineTiklanir() {
-        ReusableMethods.bekle(1);
-        ReusableMethods.click(homepage.definitionsExpandMenu);
-        ReusableMethods.visibleWait(definitions.genelTanimlamalarButonu, 5);
-        ReusableMethods.click(definitions.genelTanimlamalarButonu);
+        ReusableMethods.visibleWait(anasayfa.definitionsExpandMenu, 2);
+        ReusableMethods.click(anasayfa.definitionsExpandMenu);
+        ReusableMethods.visibleWait(tanimlamalar.genelTanimlamalarButonu, 5);
+        ReusableMethods.click(tanimlamalar.genelTanimlamalarButonu);
     }
 
     @Then("Genel Tanımlamalar ekraninin acildıgi gorulur")
     public void genelTanımlamalarEkranininAcildıgiGorulur() {
-        ReusableMethods.visibleWait(generalDefinitions.genelTanimlamalarBasligi, 5);
-        Assert.assertTrue(generalDefinitions.genelTanimlamalarBasligi.isDisplayed());
+        ReusableMethods.visibleWait(genelTanimlamalar.genelTanimlamalarBasligi, 5);
+        Assert.assertTrue(genelTanimlamalar.genelTanimlamalarBasligi.isDisplayed());
     }
 
     @Then("Tanimlamalar Listesi alaninda bulunan Ekle butonu uzerine tiklanir")
     public void tanimlamalarListesiAlanindaBulunanEkleButonuUzerineTiklanir() {
-        ReusableMethods.click(generalDefinitions.ekleButonu);
+        ReusableMethods.click(genelTanimlamalar.ekleButonu);
 
     }
 
     @Then("Tanimlamalar Ekle panelinin acildigi gorulur")
     public void tanimlamalarEklePanelininAcildigiGorulur() {
-        ReusableMethods.visibleWait(definitionsSave.tanimlamalarEklePaneli, 5);
-        Assert.assertTrue(definitionsSave.tanimlamalarEklePaneli.isDisplayed());
+        ReusableMethods.visibleWait(tanimlamalarEkle.tanimlamalarEklePaneli, 5);
+        Assert.assertTrue(tanimlamalarEkle.tanimlamalarEklePaneli.isDisplayed());
     }
 
 
@@ -61,74 +58,75 @@ public class StepDefs {
 
     @Then("Tanimlamalar Listesinde aratilan kodun yer aldigi gorulur")
     public void tanimlamalarListesindeAratilanKodunYerAldigiGorulur() {
-        //.visibleWait(genelTanimlamalar.listeyeEnSonEklenenSatir, 10);
-        //Assert.assertTrue(genelTanimlamalar.listeyeEnSonEklenenSatir.isDisplayed());
+        ReusableMethods.visibleWait(genelTanimlamalar.aramaAlanindakiKod, 10);
+        Assert.assertTrue(genelTanimlamalar.listeyeSonEklenenSatir.isDisplayed());
         ReusableMethods.bekle(2);
-        ReusableMethods.click(generalDefinitions.temizleButonu);
+        ReusableMethods.click(genelTanimlamalar.temizleButonu);
     }
 
 
     @Then("Silme Onay pop-up inin acildigi ve onay uyari metninin yer aldigi gorulur")
     public void silmeOnayPopUpIninAcildigiVeOnayUyariMetnininYerAldigiGorulur() {
-        ReusableMethods.visibleWait(generalDefinitions.alertDialog, 5);
-        Assert.assertTrue(generalDefinitions.alertDialog.isDisplayed());
+        ReusableMethods.visibleWait(genelTanimlamalar.alertDialog, 5);
+        Assert.assertTrue(genelTanimlamalar.alertDialog.isDisplayed());
         ReusableMethods.bekle(2);
     }
 
     @And("Silme Onay pop-undaki Sil butonuna tiklanir")
     public void silmeOnayPopUndakiSilButonunaTiklanir() {
-        ReusableMethods.click(generalDefinitions.deleteInAlertDialog);
+        ReusableMethods.click(genelTanimlamalar.deleteInAlertDialog);
     }
 
     @Then("Tanimlamalar Ekle panelinde Tablo alanindan Temin Tipi Tanimlama secilir ve Kod,Öncelik Sirasi,Kisa Metin ve Uzun Metin Alanlari doldurulur ardindan Kaydet butonuna tiklanir")
     public void tanimlamalarEklePanelindeTabloAlanindanTeminTipiTanimlamaSecilirVeKodÖncelikSirasiKisaMetinVeUzunMetinAlanlariDoldurulurArdindanKaydetButonunaTiklanir() {
-        ReusableMethods.visibleWait(definitionsSave.paneldekiTabloAlani, 5);
-        ReusableMethods.click(definitionsSave.paneldekiTabloAlani);
-        ReusableMethods.visibleWait(definitionsSave.tableSupplyTypeDefinition, 2);
-        ReusableMethods.click(definitionsSave.tableSupplyTypeDefinition);
-        definitionsSave.kod.sendKeys(ConfigReader.getProperty("kod"), Keys.TAB, ConfigReader.getProperty("öncelikSirasi"),
+        ReusableMethods.visibleWait(tanimlamalarEkle.paneldekiTabloAlani, 5);
+        ReusableMethods.click(tanimlamalarEkle.paneldekiTabloAlani);
+        ReusableMethods.visibleWait(tanimlamalarEkle.tableSupplyTypeDefinition, 2);
+        ReusableMethods.click(tanimlamalarEkle.tableSupplyTypeDefinition);
+        tanimlamalarEkle.kod.sendKeys(ConfigReader.getProperty("kod"), Keys.TAB, ConfigReader.getProperty("öncelikSirasi"),
                 Keys.TAB, ConfigReader.getProperty("kisaMetin"), Keys.TAB, ConfigReader.getProperty("uzunMetin"));
         ReusableMethods.bekle(1);
-        ReusableMethods.click(definitionsSave.kaydetButonu);
+        ReusableMethods.click(tanimlamalarEkle.kaydetButonu);
     }
 
     @Then("Tanimlamalar Ekle panelinde Tablo alanindan Ehliyet Tanimlama secilir ve Kod,Öncelik Sirasi,Kisa Metin ve Uzun Metin Alanlari doldurulur ardindan Kaydet butonuna tiklanir")
     public void tanimlamalarEklePanelindeTabloAlanindanEhliyetTanimlamaSecilirVeKodÖncelikSirasiKisaMetinVeUzunMetinAlanlariDoldurulurArdindanKaydetButonunaTiklanir() {
-        ReusableMethods.visibleWait(definitionsSave.paneldekiTabloAlani, 5);
-        ReusableMethods.click(definitionsSave.paneldekiTabloAlani);
-        ReusableMethods.visibleWait(definitionsSave.tablodakiEhliyetTanimlama, 2);
-        ReusableMethods.click(definitionsSave.tablodakiEhliyetTanimlama);
-        definitionsSave.kod.sendKeys(ConfigReader.getProperty("ehliyetKod"), Keys.TAB, ConfigReader.getProperty("ehliyetOncelikSirasi"),
+        ReusableMethods.visibleWait(tanimlamalarEkle.paneldekiTabloAlani, 5);
+        ReusableMethods.click(tanimlamalarEkle.paneldekiTabloAlani);
+        ReusableMethods.visibleWait(tanimlamalarEkle.tablodakiEhliyetTanimlama, 2);
+        ReusableMethods.click(tanimlamalarEkle.tablodakiEhliyetTanimlama);
+        tanimlamalarEkle.kod.sendKeys(ConfigReader.getProperty("ehliyetKod"), Keys.TAB, ConfigReader.getProperty("ehliyetOncelikSirasi"),
                 Keys.TAB, ConfigReader.getProperty("ehliyetKisaMetin"), Keys.TAB, ConfigReader.getProperty("ehliyetUzunMetin"));
         ReusableMethods.bekle(1);
-        ReusableMethods.click(definitionsSave.kaydetButonu);
+        ReusableMethods.click(tanimlamalarEkle.kaydetButonu);
     }
 
     @Then("Tanimlamalar Ekle panelinde Tablo alanindan Devlet Sinavi Tanimlama secilir ve Kod,Öncelik Sirasi,Kisa Metin ve Uzun Metin Alanlari doldurulur ardindan Kaydet butonuna tiklanir")
     public void tanimlamalarEklePanelindeTabloAlanindanDevletSinaviTanimlamaSecilirVeKodÖncelikSirasiKisaMetinVeUzunMetinAlanlariDoldurulurArdindanKaydetButonunaTiklanir() {
-        ReusableMethods.visibleWait(definitionsSave.paneldekiTabloAlani, 5);
-        ReusableMethods.click(definitionsSave.paneldekiTabloAlani);
-        ReusableMethods.visibleWait(definitionsSave.tablodakiDevletSinaviTanimlama, 2);
-        ReusableMethods.click(definitionsSave.tablodakiDevletSinaviTanimlama);
-        definitionsSave.kod.sendKeys(ConfigReader.getProperty("devletSinaviKod"), Keys.TAB, ConfigReader.getProperty("devletSirasiOncelikSirasi"),
+        ReusableMethods.visibleWait(tanimlamalarEkle.paneldekiTabloAlani, 5);
+        ReusableMethods.click(tanimlamalarEkle.paneldekiTabloAlani);
+        ReusableMethods.visibleWait(tanimlamalarEkle.tablodakiDevletSinaviTanimlama, 2);
+        ReusableMethods.click(tanimlamalarEkle.tablodakiDevletSinaviTanimlama);
+        tanimlamalarEkle.kod.sendKeys(ConfigReader.getProperty("devletSinaviKod"), Keys.TAB, ConfigReader.getProperty("devletSirasiOncelikSirasi"),
                 Keys.TAB, ConfigReader.getProperty("devletSirasiKisaMetin"), Keys.TAB, ConfigReader.getProperty("devletSirasiUzunMetin"));
         ReusableMethods.bekle(1);
-        ReusableMethods.click(definitionsSave.kaydetButonu);
+        ReusableMethods.click(tanimlamalarEkle.kaydetButonu);
     }
 
     @Then("Basarili pop-up’ının geldigi ve Tanimlamalar Listesinde eklenen kaydin yer aldigi gorulur")
     public void basariliPopUpInınGeldigiVeTanimlamalarListesindeEklenenKaydinYerAldigiGorulur() {
-        //ReusableMethods.visibleWait(definitionsSave.basariliPopUp, 5);
-        Assert.assertTrue(definitionsSave.basariliPopUp.isDisplayed());
-        Assert.assertTrue(generalDefinitions.listeyeSonEklenenSatir.isDisplayed());
+        ReusableMethods.visibleWait(tanimlamalarEkle.basariliPopUp, 5);
+        Assert.assertTrue(tanimlamalarEkle.basariliPopUp.isDisplayed());
+        ReusableMethods.visibleWait(genelTanimlamalar.listeyeSonEklenenSatir, 2);
+        Assert.assertTrue(genelTanimlamalar.listeyeSonEklenenSatir.isDisplayed());
         ReusableMethods.bekle(2);
     }
 
     @Then("Eklenen kaydin uzerine tiklanir ve duzenle butonuna basilir")
     public void eklenenKaydinUzerineTiklanirVeDuzenleButonunaBasilir() {
-        ReusableMethods.click(generalDefinitions.listeyeSonEklenenSatir);
-        ReusableMethods.visibleWait(generalDefinitions.guncelleButonu, 5);
-        ReusableMethods.click(generalDefinitions.guncelleButonu);
+        ReusableMethods.click(genelTanimlamalar.listeyeSonEklenenSatir);
+        ReusableMethods.visibleWait(genelTanimlamalar.guncelleButonu, 5);
+        ReusableMethods.click(genelTanimlamalar.guncelleButonu);
     }
 
 
@@ -136,24 +134,24 @@ public class StepDefs {
     public void basariliPopUpInınGeldigiVeTanimlamalarListesindeDuzenlenenKaydinYerAldigiGorulur() {
         ReusableMethods.visibleWait(definitionsUpdate.basariliPopUp, 10);
         Assert.assertTrue(definitionsUpdate.basariliPopUp.isDisplayed());
-        ReusableMethods.visibleWait(generalDefinitions.listeyeSonEklenenSatir, 5);
-        Assert.assertTrue(generalDefinitions.listeyeSonEklenenSatir.isDisplayed());
+        ReusableMethods.visibleWait(genelTanimlamalar.listeyeSonEklenenSatir, 5);
+        Assert.assertTrue(genelTanimlamalar.listeyeSonEklenenSatir.isDisplayed());
         ReusableMethods.bekle(2);
     }
 
     @Then("Arama alanindaki Kod alanina {string} girilir ve Sorgula butonuna tiklanir")
     public void aramaAlanindakiKodAlaninaGirilirVeSorgulaButonunaTiklanir(String str) {
-        generalDefinitions.aramaAlanindakiKod.sendKeys(str);
+        genelTanimlamalar.aramaAlanindakiKod.sendKeys(str);
         ReusableMethods.bekle(2);
-        ReusableMethods.click(generalDefinitions.aramaButonu);
+        ReusableMethods.click(genelTanimlamalar.aramaButonu);
     }
 
     @Then("Aratilan kaydin uzerine tiklanir ve sil butonuna basilir")
     public void aratilanKaydinUzerineTiklanirVeSilButonunaBasilir() {
-        //ReusableMethods.visibleWait(genelTanimlamalar.listeyeEnSonEklenenSatir, 10);
-        ReusableMethods.click(generalDefinitions.listeyeSonEklenenSatir);
+        ReusableMethods.visibleWait(genelTanimlamalar.listeyeSonEklenenSatir, 10);
+        ReusableMethods.click(genelTanimlamalar.listeyeSonEklenenSatir);
         ReusableMethods.bekle(2);
-        ReusableMethods.click(generalDefinitions.silButonu);
+        ReusableMethods.click(genelTanimlamalar.silButonu);
     }
 
 
@@ -170,38 +168,38 @@ public class StepDefs {
 
     @Then("Tanimlamalar Ekle panelinde Tablo alanindan Belge Tipi Tanimlama secilir ve Kod,Öncelik Sirasi,Kisa Metin ve Uzun Metin Alanlari doldurulur ardindan Kaydet butonuna tiklanir")
     public void tanimlamalarEklePanelindeTabloAlanindanBelgeTipiTanimlamaSecilirVeKodÖncelikSirasiKisaMetinVeUzunMetinAlanlariDoldurulurArdindanKaydetButonunaTiklanir() {
-        ReusableMethods.visibleWait(definitionsSave.paneldekiTabloAlani, 5);
-        ReusableMethods.click(definitionsSave.paneldekiTabloAlani);
-        ReusableMethods.visibleWait(definitionsSave.tablodakiBelgeTipiTanimlama, 2);
-        ReusableMethods.click(definitionsSave.tablodakiBelgeTipiTanimlama);
-        definitionsSave.kod.sendKeys(ConfigReader.getProperty("belgeTipiKod"), Keys.TAB, ConfigReader.getProperty("belgeTipiOncelikSirasi"),
+        ReusableMethods.visibleWait(tanimlamalarEkle.paneldekiTabloAlani, 5);
+        ReusableMethods.click(tanimlamalarEkle.paneldekiTabloAlani);
+        ReusableMethods.visibleWait(tanimlamalarEkle.tablodakiBelgeTipiTanimlama, 2);
+        ReusableMethods.click(tanimlamalarEkle.tablodakiBelgeTipiTanimlama);
+        tanimlamalarEkle.kod.sendKeys(ConfigReader.getProperty("belgeTipiKod"), Keys.TAB, ConfigReader.getProperty("belgeTipiOncelikSirasi"),
                 Keys.TAB, ConfigReader.getProperty("belgeTipiKisaMetin"), Keys.TAB, ConfigReader.getProperty("belgeTipiUzunMetin"));
         ReusableMethods.bekle(1);
-        ReusableMethods.click(definitionsSave.kaydetButonu);
+        ReusableMethods.click(tanimlamalarEkle.kaydetButonu);
     }
 
     @Then("Tanimlamalar Ekle panelinde Tablo alanindan Sürec Tipi Tanimlama secilir ve Kod,Öncelik Sirasi,Kisa Metin ve Uzun Metin Alanlari doldurulur ardindan Kaydet butonuna tiklanir")
     public void tanimlamalarEklePanelindeTabloAlanindanSürecTipiTanimlamaSecilirVeKodÖncelikSirasiKisaMetinVeUzunMetinAlanlariDoldurulurArdindanKaydetButonunaTiklanir() {
-        ReusableMethods.visibleWait(definitionsSave.paneldekiTabloAlani, 5);
-        ReusableMethods.click(definitionsSave.paneldekiTabloAlani);
-        ReusableMethods.visibleWait(definitionsSave.tablodakiSurecTipiTanimlama, 2);
-        ReusableMethods.click(definitionsSave.tablodakiSurecTipiTanimlama);
-        definitionsSave.kod.sendKeys(ConfigReader.getProperty("surecKod"), Keys.TAB, ConfigReader.getProperty("surecOncelikSirasi"),
+        ReusableMethods.visibleWait(tanimlamalarEkle.paneldekiTabloAlani, 5);
+        ReusableMethods.click(tanimlamalarEkle.paneldekiTabloAlani);
+        ReusableMethods.visibleWait(tanimlamalarEkle.tablodakiSurecTipiTanimlama, 2);
+        ReusableMethods.click(tanimlamalarEkle.tablodakiSurecTipiTanimlama);
+        tanimlamalarEkle.kod.sendKeys(ConfigReader.getProperty("surecKod"), Keys.TAB, ConfigReader.getProperty("surecOncelikSirasi"),
                 Keys.TAB, ConfigReader.getProperty("surecKisaMetin"), Keys.TAB, ConfigReader.getProperty("surecUzunMetin"));
         ReusableMethods.bekle(1);
-        ReusableMethods.click(definitionsSave.kaydetButonu);
+        ReusableMethods.click(tanimlamalarEkle.kaydetButonu);
     }
 
     @Then("Tanimlamalar Ekle panelinde Tablo alanindan Komisyon Uye Tipi Tanimlama secilir ve Kod,Öncelik Sirasi,Kisa Metin ve Uzun Metin Alanlari doldurulur ardindan Kaydet butonuna tiklanir")
     public void tanimlamalarEklePanelindeTabloAlanindanKomisyonUyeTipiTanimlamaSecilirVeKodÖncelikSirasiKisaMetinVeUzunMetinAlanlariDoldurulurArdindanKaydetButonunaTiklanir() {
-        ReusableMethods.visibleWait(definitionsSave.paneldekiTabloAlani, 5);
-        ReusableMethods.click(definitionsSave.paneldekiTabloAlani);
-        ReusableMethods.visibleWait(definitionsSave.tablodakiKomisyonUyeTipiTanimlama, 2);
-        ReusableMethods.click(definitionsSave.tablodakiKomisyonUyeTipiTanimlama);
-        definitionsSave.kod.sendKeys(ConfigReader.getProperty("komisyonKod"), Keys.TAB, ConfigReader.getProperty("komisyonOncelikSirasi"),
+        ReusableMethods.visibleWait(tanimlamalarEkle.paneldekiTabloAlani, 5);
+        ReusableMethods.click(tanimlamalarEkle.paneldekiTabloAlani);
+        ReusableMethods.visibleWait(tanimlamalarEkle.tablodakiKomisyonUyeTipiTanimlama, 2);
+        ReusableMethods.click(tanimlamalarEkle.tablodakiKomisyonUyeTipiTanimlama);
+        tanimlamalarEkle.kod.sendKeys(ConfigReader.getProperty("komisyonKod"), Keys.TAB, ConfigReader.getProperty("komisyonOncelikSirasi"),
                 Keys.TAB, ConfigReader.getProperty("komisyonKisaMetin"), Keys.TAB, ConfigReader.getProperty("komisyonUzunMetin"));
         ReusableMethods.bekle(1);
-        ReusableMethods.click(definitionsSave.kaydetButonu);
+        ReusableMethods.click(tanimlamalarEkle.kaydetButonu);
     }
 
     @Then("Uzun Metin alanina {string} girilir ve ardindan Kaydet butonuna tiklanir")
@@ -228,36 +226,35 @@ public class StepDefs {
 
     @Then("Tanimlamalar Ekle panelinde Tablo alanindan Soru Grubu Tanimlama secilir ve Kod,Öncelik Sirasi,Kisa Metin ve Uzun Metin Alanlari doldurulur ardindan Kaydet butonuna tiklanir")
     public void tanimlamalarEklePanelindeTabloAlanindanSoruGrubuTanimlamaSecilirVeKodÖncelikSirasiKisaMetinVeUzunMetinAlanlariDoldurulurArdindanKaydetButonunaTiklanir() {
-        ReusableMethods.visibleWait(definitionsSave.paneldekiTabloAlani, 5);
-        ReusableMethods.click(definitionsSave.paneldekiTabloAlani);
-        ReusableMethods.visibleWait(definitionsSave.tablodakiSoruGrubuTanimlama, 2);
-        ReusableMethods.click(definitionsSave.tablodakiSoruGrubuTanimlama);
-        definitionsSave.kod.sendKeys(ConfigReader.getProperty("soruGrubuKod"), Keys.TAB, ConfigReader.getProperty("soruGrubuOncelikSirasi"),
+        ReusableMethods.visibleWait(tanimlamalarEkle.paneldekiTabloAlani, 5);
+        ReusableMethods.click(tanimlamalarEkle.paneldekiTabloAlani);
+        ReusableMethods.visibleWait(tanimlamalarEkle.tablodakiSoruGrubuTanimlama, 2);
+        ReusableMethods.click(tanimlamalarEkle.tablodakiSoruGrubuTanimlama);
+        tanimlamalarEkle.kod.sendKeys(ConfigReader.getProperty("soruGrubuKod"), Keys.TAB, ConfigReader.getProperty("soruGrubuOncelikSirasi"),
                 Keys.TAB, ConfigReader.getProperty("soruGrubuKisaMetin"), Keys.TAB, ConfigReader.getProperty("soruGrubuUzunMetin"));
         ReusableMethods.bekle(1);
-        ReusableMethods.click(definitionsSave.kaydetButonu);
+        ReusableMethods.click(tanimlamalarEkle.kaydetButonu);
     }
 
     @Then("Tanimlamalar Ekle panelinde Tablo alanindan Soru Zorluk Derecesi Tanimlama secilir ve Kod,Öncelik Sirasi,Kisa Metin ve Uzun Metin Alanlari doldurulur ardindan Kaydet butonuna tiklanir")
     public void tanimlamalarEklePanelindeTabloAlanindanSoruZorlukDerecesiTanimlamaSecilirVeKodÖncelikSirasiKisaMetinVeUzunMetinAlanlariDoldurulurArdindanKaydetButonunaTiklanir() {
-        ReusableMethods.visibleWait(definitionsSave.paneldekiTabloAlani, 5);
-        ReusableMethods.click(definitionsSave.paneldekiTabloAlani);
-        ReusableMethods.visibleWait(definitionsSave.tablodakiSoruZorlukDerecesiTanimlama, 2);
-        ReusableMethods.click(definitionsSave.tablodakiSoruZorlukDerecesiTanimlama);
-        definitionsSave.kod.sendKeys(ConfigReader.getProperty("soruZorlukDerecesiKod"), Keys.TAB, ConfigReader.getProperty("soruZorlukDerecesiOncelikSirasi"),
+        ReusableMethods.visibleWait(tanimlamalarEkle.paneldekiTabloAlani, 5);
+        ReusableMethods.click(tanimlamalarEkle.paneldekiTabloAlani);
+        ReusableMethods.visibleWait(tanimlamalarEkle.tablodakiSoruZorlukDerecesiTanimlama, 2);
+        ReusableMethods.click(tanimlamalarEkle.tablodakiSoruZorlukDerecesiTanimlama);
+        tanimlamalarEkle.kod.sendKeys(ConfigReader.getProperty("soruZorlukDerecesiKod"), Keys.TAB, ConfigReader.getProperty("soruZorlukDerecesiOncelikSirasi"),
                 Keys.TAB, ConfigReader.getProperty("soruZorlukDerecesiKisaMetin"), Keys.TAB, ConfigReader.getProperty("soruZorlukDerecesiUzunMetin"));
         ReusableMethods.bekle(1);
-        ReusableMethods.click(definitionsSave.kaydetButonu);
+        ReusableMethods.click(tanimlamalarEkle.kaydetButonu);
     }
 
     @Then("Personel Temin islemleri panelindeki Tanimlamalar Menüsü icerisinde bulunan Surec Yeri Tanimlama butonu uzerine tiklanir")
     public void personelTeminIslemleriPanelindekiTanimlamalarMenüsüIcerisindeBulunanSurecYeriTanimlamaButonuUzerineTiklanir() {
         ReusableMethods.bekle(1);
-        ReusableMethods.click(homepage.definitionsExpandMenu);
-        ReusableMethods.visibleWait(definitions.surecYeriTanimlamaButonu, 5);
-        ReusableMethods.click(definitions.surecYeriTanimlamaButonu);
+        ReusableMethods.click(anasayfa.definitionsExpandMenu);
+        ReusableMethods.visibleWait(tanimlamalar.surecYeriTanimlamaButonu, 5);
+        ReusableMethods.click(tanimlamalar.surecYeriTanimlamaButonu);
     }
-
 
 
     @Then("Surec Yeri Ekle panelinin acildigi gorulur")
@@ -280,21 +277,16 @@ public class StepDefs {
     }
 
 
-
-
-
-
-
     @And("Basarili pop-up’inin geldigi ve Listede silinen kaydin olmadigi dogrulanir")
     public void basariliPopUpIninGeldigiVeListedeSilinenKaydinOlmadigiDogrulanir() {
-        ReusableMethods.visibleWait(generalDefinitions.basariliPopUpForDelete, 5);
-        Assert.assertTrue(generalDefinitions.basariliPopUpForDelete.isDisplayed());
+        ReusableMethods.visibleWait(genelTanimlamalar.basariliPopUpForDelete, 5);
+        Assert.assertTrue(genelTanimlamalar.basariliPopUpForDelete.isDisplayed());
     }
 
     @Then("Personel Temin islemleri panelindeki Sinav islemleri Menusu icerisinde bulunan Soru Tanimlamalar butonu uzerine tiklanir")
     public void personelTeminIslemleriPanelindekiSinavIslemleriMenusuIcerisindeBulunanSoruTanimlamalarButonuUzerineTiklanir() {
-        ReusableMethods.visibleWait(homepage.examOperationsExpandMenu, 5);
-        ReusableMethods.click(homepage.examOperationsExpandMenu);
+        ReusableMethods.visibleWait(anasayfa.examOperationsExpandMenu, 5);
+        ReusableMethods.click(anasayfa.examOperationsExpandMenu);
     }
 
     @Then("emre abi")
