@@ -1,6 +1,6 @@
 Feature: HVL-AZ-PYBS-TMN-YGD-70 Süreç Tipi Tanımlamasına olanak sağlayacaktır
-  @hooks
-  Scenario: PERTEM Süreç Tipi Tanimlama, Düzenleme, Listeleme ve silme testi
+
+  Background:
     Given kullanici "pertemUrl" sayfasina gider
     Then "hvltest1" ve "123" girilir
     Then portala giris yapilir

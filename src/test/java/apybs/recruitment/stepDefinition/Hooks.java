@@ -1,6 +1,8 @@
-package apybs.recruitment.runner;
+package apybs.recruitment.stepDefinition;
 
+import apybs.utilities.ConfigReader;
 import apybs.utilities.Driver;
+import apybs.utilities.ReusableMethods;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
@@ -22,9 +24,9 @@ public class Hooks {
     */
 
 
-    @Before("@hooks")
+    @Before()
     public void setUp() throws Exception {
-        System.out.println("ilk burası başlıyor");
+
     }
 
     /*
@@ -40,7 +42,7 @@ public class Hooks {
             TakesScreenshot ts = (TakesScreenshot) Driver.getDriver();
             scenario.attach(ts.getScreenshotAs(OutputType.BYTES), "image/jpeg",
                     "scenario_" + scenario.getName());
-            Driver.closeDriver();
+            Driver.quitDriver();
         }
     }
     //Bu method fail olan scenario'larda fail olan kismin resmini rapora ekleyecektir.

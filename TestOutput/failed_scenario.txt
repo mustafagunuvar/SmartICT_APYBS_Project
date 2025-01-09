@@ -1,6 +1,6 @@
-file:src/test/resources/PERTEM/TANIMLAMALAR%20TESTLERİ/TNM%20-%200040%20-%20Tanımlamalar%20-%20Genel%20Tanımlamalar%20-%20Soru%20Zorluk%20Derecesi%20Tanımlama%20Testi.feature:3
-file:src/test/resources/PERTEM/TANIMLAMALAR%20TESTLERİ/TNM%20-%200020%20-%20Tanımlamalar%20-%20Genel%20Tanımlamalar%20-%20Komisyon%20Üye%20Tipi%20Tanımlama%20Testi.feature:3
-file:src/test/resources/PERTEM/TANIMLAMALAR%20TESTLERİ/TNM%20-%200060%20-%20Tanımlamalar%20-%20Genel%20Tanımlamalar%20-%20Belge%20Tipi%20Tanımlama%20Testi.feature:3
-file:src/test/resources/PERTEM/TANIMLAMALAR%20TESTLERİ/TNM%20-%200070%20-%20Tanımlamalar%20-%20Süreç%20Yeri%20Tanımlama%20-%20Süreç%20Yeri%20Tanımlama%20Testi.feature:3
-file:src/test/resources/PERTEM/TANIMLAMALAR%20TESTLERİ/TNM%20-%200030%20-%20Tanımlamalar%20-%20Genel%20Tanımlamalar%20-%20Soru%20Grubu%20Tanımlama%20Testi.feature:3
+file:src/test/resources/PERTEM/TANIMLAMALAR%20TESTLERİ/TNM%20-%200040%20-%20Tanımlamalar%20-%20Genel%20Tanımlamalar%20-%20Soru%20Zorluk%20Derecesi%20Tanımlama%20Testi.feature:9
+file:src/test/resources/PERTEM/TANIMLAMALAR%20TESTLERİ/TNM%20-%200020%20-%20Tanımlamalar%20-%20Genel%20Tanımlamalar%20-%20Komisyon%20Üye%20Tipi%20Tanımlama%20Testi.feature:9
+file:src/test/resources/PERTEM/TANIMLAMALAR%20TESTLERİ/TNM%20-%200060%20-%20Tanımlamalar%20-%20Genel%20Tanımlamalar%20-%20Belge%20Tipi%20Tanımlama%20Testi.feature:9
+file:src/test/resources/PERTEM/TANIMLAMALAR%20TESTLERİ/TNM%20-%200070%20-%20Tanımlamalar%20-%20Süreç%20Yeri%20Tanımlama%20-%20Süreç%20Yeri%20Tanımlama%20Testi.feature:9
+file:src/test/resources/PERTEM/TANIMLAMALAR%20TESTLERİ/TNM%20-%200030%20-%20Tanımlamalar%20-%20Genel%20Tanımlamalar%20-%20Soru%20Grubu%20Tanımlama%20Testi.feature:9
 file:src/test/resources/PERTEM/TANIMLAMALAR%20TESTLERİ/TNM%20-%200010%20-%20Tanımlamalar%20-%20Genel%20Tanımlamalar%20-%20Süreç%20Tipi%20Tanımlama%20Testi.feature:10

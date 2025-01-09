@@ -3,18 +3,16 @@ package apybs.recruitment.stepDefinition;
 import apybs.recruitment.pages.*;
 import apybs.utilities.ConfigReader;
 import apybs.utilities.Driver;
-import apybs.utilities.PublicPage;
 import apybs.utilities.ReusableMethods;
 import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 
-public class stepDefs {
+public class StepDefs {
 
-    PublicPage publicPage = new PublicPage();
+
     Homepage homepage = new Homepage();
     Definitions definitions = new Definitions();
     GeneralDefinitions generalDefinitions = new GeneralDefinitions();
@@ -24,21 +22,8 @@ public class stepDefs {
     Actions actions = new Actions(Driver.getDriver());
 
 
-    @Then("personel temin profili secilir")
-    public void personelTeminProfiliSecilir() {
-        ReusableMethods.visibleWait(publicPage.profilSecme, 4);
-        ReusableMethods.click(publicPage.profilSecme);
-        ReusableMethods.visibleWait(publicPage.pertemProfili, 9);
-        ReusableMethods.click(publicPage.pertemProfili);
-        ReusableMethods.bekle(2);
-        ReusableMethods.click(publicPage.devamEt);
-    }
 
-    @Then("ana paneldeki personel temin butonuna tiklanir")
-    public void anaPaneldekiPersonelTeminButonunaTiklanir() {
-        ReusableMethods.visibleWait(homepage.leftPanelPertemButton, 5);
-        ReusableMethods.click(homepage.leftPanelPertemButton);
-    }
+
 
     @Then("Personel Temin islemleri panelindeki Tanimlamalar Menüsü icerisinde bulunan Genel Tanimlamalar butonu uzerine tiklanir")
     public void personelTeminIslemleriPanelindekiTanimlamalarMenüsüIcerisindeBulunanGenelTanimlamalarButonuUzerineTiklanir() {
@@ -294,22 +279,11 @@ public class stepDefs {
 
     }
 
-    @Given("kullanici {string} sayfasina gider")
-    public void kullaniciSayfasinaGider(String str) {
-        Driver.getDriver().get(ConfigReader.getProperty(str));
-        ReusableMethods.bekle(2);
-    }
 
-    @Then("{string} ve {string} girilir")
-    public void veGirilir(String kullaniciAd, String parola) {
-        publicPage.kullaniciAdi.sendKeys(kullaniciAd, Keys.TAB, parola);
-        ReusableMethods.bekle(2);
-    }
 
-    @Then("portala giris yapilir")
-    public void portalaGirisYapilir() {
-        ReusableMethods.click(publicPage.girisYap);
-    }
+
+
+
 
     @And("Basarili pop-up’inin geldigi ve Listede silinen kaydin olmadigi dogrulanir")
     public void basariliPopUpIninGeldigiVeListedeSilinenKaydinOlmadigiDogrulanir() {

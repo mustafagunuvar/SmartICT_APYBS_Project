@@ -1,11 +1,12 @@
 Feature: HVL-AZ-PYBS-TMN-YGD-100 Soru Zorluk Derecesi Tanımlamasına olanak sağlayacaktır
-  @scenarious
-  Scenario: PERTEM Soru Zorluk Derecesi Tanimlama, Düzenleme, Listeleme ve silme testi
+  Background:
     Given kullanici "pertemUrl" sayfasina gider
     Then "hvltest1" ve "123" girilir
     Then portala giris yapilir
     Then personel temin profili secilir
     Then ana paneldeki personel temin butonuna tiklanir
+  @scenarious
+  Scenario: PERTEM Soru Zorluk Derecesi Tanimlama, Düzenleme, Listeleme ve silme testi
     Then Personel Temin islemleri panelindeki Tanimlamalar Menüsü icerisinde bulunan Genel Tanimlamalar butonu uzerine tiklanir
     Then Genel Tanımlamalar ekraninin acildıgi gorulur
     Then Tanimlamalar Listesi alaninda bulunan Ekle butonu uzerine tiklanir
