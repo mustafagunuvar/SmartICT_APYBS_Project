@@ -42,7 +42,7 @@ public class Hooks {
             TakesScreenshot ts = (TakesScreenshot) Driver.getDriver();
             scenario.attach(ts.getScreenshotAs(OutputType.BYTES), "image/jpeg",
                     "scenario_" + scenario.getName());
-            Driver.quitDriver();
+            //Driver.quitDriver();
         }
     }
     //Bu method fail olan scenario'larda fail olan kismin resmini rapora ekleyecektir.

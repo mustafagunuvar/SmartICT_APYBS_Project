@@ -16,7 +16,7 @@ public class GenelTanimlamalar {
     @FindBy(xpath = "//*[text()='Ekle']")
     public WebElement ekleButonu;
 
-    @FindBy(xpath = "//*[@id='HRM_PER_A_EKO_GENELTANIMISLEM_001_edit']")
+    @FindBy(xpath = "//*[text()='Düzenle']")
     public WebElement guncelleButonu;
 
     @FindBy(xpath = "//*[text()='Sil']")
@@ -25,8 +25,11 @@ public class GenelTanimlamalar {
     @FindBy(xpath = "(//tr)[2]")
     public WebElement listeyeSonEklenenSatir;
 
-    @FindBy(xpath = "(//*[@id='code'])[1]")
-    public WebElement aramaAlanindakiKod;
+    @FindBy(xpath = "//*[@formcontrolname='longText']")
+    public WebElement aramaAlanindakiUzunMetin;
+
+    @FindBy(xpath = "(//*[@id='precedence'])[1]")
+    public WebElement aramaAlanindakiOncelikSirasi;
 
     @FindBy(xpath = "(//*[@id='shortText'])[1]")
     public WebElement shortTextInSearchField;
@@ -45,12 +48,6 @@ public class GenelTanimlamalar {
 
     @FindBy(xpath = "//*[text()='Başarılı']")
     public WebElement basariliPopUpForDelete;
-
-
-
-
-
-
 
 
 }
